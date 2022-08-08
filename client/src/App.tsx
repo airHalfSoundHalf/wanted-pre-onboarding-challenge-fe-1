@@ -1,8 +1,11 @@
-import LoginPage from "./Pages/Auth/LoginPage";
-import LoginRoute from "./routes/LoginRoute";
+import MainRoutes from "./routes";
 
 function App() {
-  return <>{LoginPage() ? <LoginRoute /> : ""}</>;
+  return (
+    <>
+      <MainRoutes />
+    </>
+  );
 }
 
 export default App;
