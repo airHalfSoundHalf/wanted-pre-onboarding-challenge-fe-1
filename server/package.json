@@ -1,0 +1,43 @@
+{
+  "name": "todos-backend",
+  "version": "1.0.0",
+  "description": "- 제공해드리는 API Repository를 활용하여 가이드에 따라 `Todo App`을 작성, 본인의 github에 `Public`으로 올려주세요. (주의: Public이 아닐 경우 과제를 확인할 수 없습니다)\r - 완성한 과제는 모집 마감 후 설문 조사를 통해 제출해주세요. (개강 시 설문 조사 링크 전달 예정)\r - 제출 레파지토리 명은 `wanted-pre-onboarding-challenge-fe-1`로 생성해 주세요.\r - 과제 수행 개수에 따라 기본적인 평가가 이루어지며, 커리큘럼 운영 과정에서 최소한의 수준을 파악하기 위한 용도입니다.\r - 코드의 일관성, 가독성, 함수 분리, 컴포넌트 설계, 코드 퀄리티 등을 기준으로 세부적인 평가가 이루어집니다.\r - 해당 과제에 대한 해설은 개강 후 진행될 예정입니다.\r - `README.md`를 꼭 작성해 주세요. 본인에 대한 소개나 프로젝트 소개 등 자유롭게 작성해주시면 됩니다.\r - 반드시 함수 컴포넌트로 개발해주세요. (React Hooks)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --ignore db/ --watch '*.ts' --exec node --experimental-modules --es-module-specifier-resolution=node --loader ts-node/esm index.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/http-errors": "^1.8.2",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/validator": "^13.7.4",
+    "nodemon": "^2.0.18",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "http-errors": "^2.0.0",
+    "http-status-codes": "^2.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "lowdb": "^3.0.0",
+    "nanoid": "3.3.4",
+    "validator": "^13.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starkoora/wanted-pre-onboarding-challenge-fe-1-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/starkoora/wanted-pre-onboarding-challenge-fe-1-api/issues"
+  },
+  "homepage": "https://github.com/starkoora/wanted-pre-onboarding-challenge-fe-1-api#readme"
+}
