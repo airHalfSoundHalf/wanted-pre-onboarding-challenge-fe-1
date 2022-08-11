@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import LoginPage from "../pages/Auth/LoginPage";
@@ -20,15 +21,38 @@ const Wrap = styled.div`
     color: #222;
   }
 `;
+// ${(props: { change: any }) =>
+// props.change &&
+// css`
+//   color: #fff;
+// `}
 
 function MainRoutes() {
+  const [textColor, setTextColor] = useState("");
+  const handleChangeTextColor = () => {
+    setTextColor(textColor === "#222" ? "#fff" : "#222");
+  };
+
   return (
     <>
       <BrowserRouter>
         <Wrap>
-          <Link to="/login">Login</Link>
-          <Link to="/todolist">Todo List</Link>
+          <Link
+            to="/login"
+            onClick={handleChangeTextColor}
+            style={{ color: textColor }}
+          >
+            Login
+          </Link>
+          <Link
+            to="/todolist"
+            onClick={handleChangeTextColor}
+            style={{ color: textColor }}
+          >
+            Todo List
+          </Link>
         </Wrap>
+
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
