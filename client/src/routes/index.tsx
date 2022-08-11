@@ -1,15 +1,17 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import LoginPage from "../Pages/Auth/LoginPage";
-import RegisterPage from "../Pages/Auth/RegisterPage";
-import Todos from "../Pages/Todo";
+import LoginPage from "../pages/Auth/LoginPage";
+import RegisterPage from "../pages/Auth/RegisterPage";
+import Todos from "../pages/Todo";
 
 const Wrap = styled.div`
   width: 100%;
   height: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  position: absolute;
+  top: 0;
 
   & a {
     padding: 30px 40px;

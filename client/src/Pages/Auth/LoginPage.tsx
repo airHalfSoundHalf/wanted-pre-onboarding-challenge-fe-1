@@ -6,7 +6,7 @@ import {
   Controller,
   FormButton,
   FormContainer,
-  FormControlLabel,
+  FormTitle,
   Register,
 } from "./LoginPageStyle";
 
@@ -31,7 +31,7 @@ const LoginPage = () => {
   return (
     <AuthForm onSubmit={login}>
       <FormContainer>
-        <FormControlLabel htmlFor="username">Username</FormControlLabel>
+        <FormTitle>Login</FormTitle>
         <Controller
           placeholder="Username"
           value={username}
@@ -42,7 +42,6 @@ const LoginPage = () => {
             })
           }
         />
-        <FormControlLabel htmlFor="password">Password</FormControlLabel>
         <Controller
           placeholder="password"
           type="password"
@@ -54,7 +53,7 @@ const LoginPage = () => {
             })
           }
         />
-        <FormButton type="submit">Login</FormButton>
+        <FormButton type="submit">Log in</FormButton>
         <Register>
           <Link to="/register">회원가입</Link>
         </Register>

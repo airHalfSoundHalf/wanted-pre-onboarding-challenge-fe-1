@@ -1,5 +1,10 @@
-import React, { useRef } from "react";
-import { Controller, FormButton, FormWrapper } from "./TodoList/TodoListStyle";
+import React, { useEffect, useRef, useState } from "react";
+import {
+  Controller,
+  FormButton,
+  FormWrapper,
+  InsertForm,
+} from "./TodoList/TodoListStyle";
 
 interface Props {
   todo: string;
@@ -10,6 +15,14 @@ interface Props {
 const InputField = ({ todo, setTodo, handleAdd }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const inputRefFocus = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRefFocus.current?.focus();
+  }, []);
+
+  const [open, setOpen] = useState(false);
+  const onToggle = () => setOpen(!open);
   return (
     <FormWrapper
       onSubmit={(e) => {
@@ -17,13 +30,20 @@ const InputField = ({ todo, setTodo, handleAdd }: Props) => {
         inputRef.current?.blur();
       }}
     >
-      <Controller
-        ref={inputRef}
-        value={todo}
-        onChange={(e) => setTodo(e.target.value)}
-        placeholder="Enter a Task"
-      />
-      <FormButton type="submit">Go</FormButton>
+      {open && (
+        <InsertForm>
+          <Controller
+            autoFocus
+            ref={inputRefFocus}
+            value={todo}
+            onChange={(e) => setTodo(e.target.value)}
+            placeholder="입력해주세요."
+          />
+        </InsertForm>
+      )}
+      <FormButton type="submit" onClick={onToggle} open={open}>
+        등록
+      </FormButton>
     </FormWrapper>
   );
 };

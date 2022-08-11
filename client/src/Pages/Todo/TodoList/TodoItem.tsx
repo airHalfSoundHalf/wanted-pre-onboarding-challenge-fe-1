@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Todo } from "./model";
+import { Todo } from "../model";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
 import {
@@ -8,7 +8,7 @@ import {
   TodosSingleInput,
   TodosSingleText,
   TodosSingleTextS,
-} from "./TodoList/TodoListStyle";
+} from "./TodoListStyle";
 
 type Props = {
   todo: Todo;
