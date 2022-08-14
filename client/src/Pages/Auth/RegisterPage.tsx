@@ -9,8 +9,8 @@ import {
 } from "./LoginPageStyle";
 
 const RegisterPage = () => {
-  const [{ username, password, repeatPassword }, setRegisterData] = useState({
-    username: "",
+  const [{ email, password, repeatPassword }, setRegisterData] = useState({
+    email: "",
     password: "",
     repeatPassword: "",
   });
@@ -20,7 +20,7 @@ const RegisterPage = () => {
   const register = (event: React.FormEvent) => {
     event.preventDefault();
     if (password === repeatPassword) {
-      onRegister({ username, password });
+      onRegister({ email, password });
     } else {
       setError("동일한 비밀번호를 입력해주세요.");
     }
@@ -32,10 +32,10 @@ const RegisterPage = () => {
         <FormControlLabel htmlFor="username">Username</FormControlLabel>
         <Controller
           name="username"
-          value={username}
+          value={email}
           onChange={(event) =>
             setRegisterData({
-              username: event.target.value,
+              email: event.target.value,
               password,
               repeatPassword,
             })
@@ -48,7 +48,7 @@ const RegisterPage = () => {
           value={password}
           onChange={(event) =>
             setRegisterData({
-              username,
+              email,
               password: event.target.value,
               repeatPassword,
             })
@@ -63,7 +63,7 @@ const RegisterPage = () => {
           value={repeatPassword}
           onChange={(event) =>
             setRegisterData({
-              username,
+              email,
               password,
               repeatPassword: event.target.value,
             })

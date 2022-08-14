@@ -11,8 +11,8 @@ import {
 } from "./LoginPageStyle";
 
 const LoginPage = () => {
-  const [{ username, password }, setCredentials] = useState({
-    username: "",
+  const [{ email, password }, setCredentials] = useState({
+    email: "",
     password: "",
   });
   const [error, setError] = useState("");
@@ -20,7 +20,7 @@ const LoginPage = () => {
   const login = async (event: React.FormEvent) => {
     event.preventDefault();
     const response = await onLogin({
-      username,
+      email,
       password,
     });
     if (response && response.error) {
@@ -34,10 +34,10 @@ const LoginPage = () => {
         <FormTitle>Login</FormTitle>
         <Controller
           placeholder="Username"
-          value={username}
+          value={email}
           onChange={(event) =>
             setCredentials({
-              username: event.target.value,
+              email: event.target.value,
               password,
             })
           }
@@ -48,14 +48,14 @@ const LoginPage = () => {
           value={password}
           onChange={(event) =>
             setCredentials({
-              username,
+              email,
               password: event.target.value,
             })
           }
         />
         <FormButton type="submit">Log in</FormButton>
         <Register>
-          <Link to="/register">회원가입</Link>
+          <Link to="/users/create">회원가입</Link>
         </Register>
         {error.length > 0 && <p>{error}</p>}
       </FormContainer>

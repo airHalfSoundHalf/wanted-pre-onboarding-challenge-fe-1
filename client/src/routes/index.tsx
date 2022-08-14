@@ -38,7 +38,7 @@ function MainRoutes() {
       <BrowserRouter>
         <Wrap>
           <Link
-            to="/login"
+            to="/users/login"
             onClick={handleChangeTextColor}
             style={{ color: textColor }}
           >
@@ -54,8 +54,8 @@ function MainRoutes() {
         </Wrap>
 
         <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/users/login" element={<LoginPage />} />
+          <Route path="/users/create" element={<RegisterPage />} />
           <Route path="/todolist" element={<Todos />} />
         </Routes>
       </BrowserRouter>
