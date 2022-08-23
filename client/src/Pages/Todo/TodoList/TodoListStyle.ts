@@ -6,9 +6,9 @@ export const Wrap = styled.div`
 `;
 export const Container = styled.div`
   width: 512px;
-  height: 768px;
+  height: auto;
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: 20px 30px 100px;
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
@@ -69,24 +69,26 @@ export const FormWrapper = styled.form`
 
 export const InsertForm = styled.div`
   width: 100%;
-  padding: 30px 30px 40px;
+  padding: 20px 20px 40px;
   bottom: 0;
   left: 0;
   position: absolute;
   background: #f8f9fa;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 `;
 
 export const Controller = styled.input`
   width: 100%;
   margin: 0 auto;
   border-radius: 50px;
-  padding: 20px 30px;
+  padding: 15px 20px;
   font-size: 18px;
   border: none;
-  transition: 0.2s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
   :focus {
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
     outline: none;
   }
 `;
