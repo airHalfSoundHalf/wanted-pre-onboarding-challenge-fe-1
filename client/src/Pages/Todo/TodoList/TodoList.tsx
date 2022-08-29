@@ -24,16 +24,18 @@ const TodoList = ({ todos, setTodos }: Props) => {
       <h2>{dateString}</h2>
       <div className="day">{dayName}</div>
       <div className="tasks">할 일 {undoneTasks.length}개 남음</div>
-      <Todos>
-        {todos?.map((todo) => (
-          <TodoItem
-            todos={todos}
-            todo={todo}
-            key={todo.id}
-            setTodos={setTodos}
-          />
-        ))}
-      </Todos>
+      <div className="wrap">
+        <Todos>
+          {todos?.map((todo) => (
+            <TodoItem
+              todos={todos}
+              todo={todo}
+              key={todo.id}
+              setTodos={setTodos}
+            />
+          ))}
+        </Todos>
+      </div>
     </>
   );
 };
