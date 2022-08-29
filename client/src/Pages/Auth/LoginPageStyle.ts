@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+export const GotoTodoList = styled.div`
+  cursor: pointer;
+  position: absolute;
+  left: 50px;
+  top: 30px;
+  & svg {
+    font-size: 30px;
+    color: #fff;
+  }
+`;
+
 export const AuthForm = styled.form`
   width: 100%;
   height: 100vh;

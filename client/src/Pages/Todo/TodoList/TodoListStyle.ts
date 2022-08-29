@@ -4,17 +4,19 @@ export const Wrap = styled.div`
   width: 100vw;
   min-height: 100vh;
 `;
+
+export const GotoAuth = styled.div`
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  & svg {
+    font-size: 30px;
+  }
+`;
+
 export const Container = styled.div`
   width: 512px;
-  height: auto;
-  margin: 0 auto;
-  padding: 20px 30px 100px;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.04);
-  display: flex;
-  flex-direction: column;
-  position: relative;
 
   & h2 {
     font-size: 36px;
@@ -37,29 +39,24 @@ export const Container = styled.div`
     border-bottom: 1px solid #e9ecef;
     padding-bottom: 24px;
   }
-`;
 
-export const TodoTitle = styled.span`
-  text-transform: uppercase;
-  font-size: 40px;
-  font-weight: bold;
-  margin: 40px 0;
-  letter-spacing: 2px;
-  color: #000;
-  z-index: 1;
-  text-align: center;
-  display: block;
-
-  @media (max-width: 800px) {
-    .heading {
-      margin: 15px 0;
-      font-size: 35px;
-    }
+  & .wrap {
+    overflow: hidden;
+    height: 300px;
   }
 `;
 
 export const Content = styled.div`
-  flex: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 512px;
+  padding: 20px 30px 100px;
+  border-radius: 16px;
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 4%);
+  height: 600px;
 `;
 
 // InputField
