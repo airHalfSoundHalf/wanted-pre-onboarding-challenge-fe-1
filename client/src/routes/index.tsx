@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LoginPage from "../pages/Auth/LoginPage";
 import RegisterPage from "../pages/Auth/RegisterPage";
-import Todos from "../pages/Todo";
+import Todos from "../pages/Todos";
 
 function MainRoutes() {
   return (
