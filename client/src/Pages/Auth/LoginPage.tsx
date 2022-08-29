@@ -33,7 +33,7 @@ const LoginPage = () => {
   };
 
   const GotoTodosHandler = () => {
-    navigate(`/`);
+    navigate(`/wanted-pre-onboarding-challenge-fe-1`);
   };
 
   return (

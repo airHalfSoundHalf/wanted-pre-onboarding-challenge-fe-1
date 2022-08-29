@@ -8,7 +8,10 @@ function MainRoutes() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Todos />} />
+          <Route
+            path="/wanted-pre-onboarding-challenge-fe-1"
+            element={<Todos />}
+          />
           <Route path="/users/login" element={<LoginPage />} />
           <Route path="/users/create" element={<RegisterPage />} />
         </Routes>
